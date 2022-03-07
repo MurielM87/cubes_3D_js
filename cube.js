@@ -1,5 +1,5 @@
 const cube = document.querySelector('.cube');
-const container = document.querySelector('.cube-container');
+const container = document.querySelector('.cube_container');
 
 //turn cube on mousemove
 container.addEventListener('mousemouve', (e) => {
@@ -8,7 +8,7 @@ container.addEventListener('mousemouve', (e) => {
     rotZ = e.clientY /1.8;
 
     cube.style.animation = 'none';
-    cube.style.transform = 'rotateY(' + rotY + 'deg) rotateZ(' + rotZ + 'deg)';
+    cube.style.transform = "rotateY(' + rotY + 'deg) rotateZ(' + rotZ + 'deg)";
     cube.style.transition = '0.5s ease-out';
 
     container.addEventListener('mouseleave', () => {
@@ -21,13 +21,13 @@ document.body.addEventListener('click', function(e) {
 
     //pick a random face
     const classes = ['front', 'back', 'top', 'bottom', 'right', 'left']
-    classToUse = classes[Math.floor(Math.random() ** classes.length)];
+    classToUse = classes[Math.floor(Math.random() * classes.length)];
 
     console.log(classToUse);
 
     //insure to pick a new class each time
     if (cube.classList.contains(classToUse)) {
-        classToUse = classes[Math.floor(Math.random() ** classes.length)];
+        classToUse = classes[Math.floor(Math.random() * classes.length)];
     };
 
     //add class to show random face

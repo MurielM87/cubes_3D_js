@@ -8,22 +8,33 @@ body {
 
 
 .container {
+    margin: 0 auto;
     height: 500px;
     width: 100%;
     position: relative;
     margin-top: 40px;
 }
 
-.container i {
-    position: absolute;
-    z-index:3;
+i {
     font-size: 20px;
     color: red;
-    top: 50%;
-    left: 22%;
     transform: translateY(-50%);
     animation: scale 2s linear infinite;
     cursor: pointer;
+}
+
+#leftArrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 20%;
+}
+
+#rightArrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right: 10%;
 }
 
 @keyframes scale {
@@ -39,7 +50,7 @@ body {
 }
 
 #img_background {
-    width: 1000px;
+    width: 1150px;
     height: 700px;
     position: absolute;
     z-index: 1;
@@ -55,8 +66,8 @@ body {
     position: absolute;
     z-index: 2;
     top: 50%;
-    left: 2%;
-    transform: translate(50%, -50%);
+    left: 45%;
+    transform: translate(-50%, -50%);
     cursor: move;
 }
 
